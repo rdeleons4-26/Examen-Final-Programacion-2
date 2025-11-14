@@ -18,10 +18,10 @@ Este proyecto incluye:
 5. **Acerca de** (con foto)  
 
 Todas las operaciones de los CRUD incluyen lo siguiente:
-- Formulario con JTextField y JComboBox  
-- `JTable` para listar registros  
-- Botones: Nuevo/Limpiar, Guardar, Modificar/Actualizar, Eliminar, Listar  
-- Validaciones con `JOptionPane`  
+- Formulario con jtextfield y jcombobox  
+- jtable para listar registros  
+- Botones 
+- Validaciones con joptionpane  
 - Confirmacion antes de eliminar  
 - Listado siempre actualizado  
 
@@ -45,7 +45,7 @@ Para ejecutar el proyecto desde NetBeans:
 4. Ejecutar el proyecto 
 5. El sistema se abrira con la ventana de Ingreso, donde pedira usuario y contraseña.  
 
-## Acerca de
+## Acerca_de
 - El formulario muestra informacion del alumno: Carne, Nombre completo y demas datos.  
 - La foto se debe cargar en el boton Cargar Foto,como referencia en la carpeta src/imagenes hay una fotografia y se guarda la ruta en la base de datos.  
 - Los datos del alumno se toman de la tabla acercaa_de 
