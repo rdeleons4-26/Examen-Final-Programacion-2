@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `biblioteca` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `biblioteca`;
 -- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: biblioteca
@@ -21,7 +23,7 @@ SET @@SESSION.SQL_LOG_BIN= 0;
 -- GTID state at the beginning of the backup 
 --
 
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '755dfe4a-bf60-11f0-ab07-ec916146af7c:1-122';
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '755dfe4a-bf60-11f0-ab07-ec916146af7c:1-125';
 
 --
 -- Table structure for table `acerca__de`
@@ -41,6 +43,15 @@ CREATE TABLE `acerca__de` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `acerca__de`
+--
+
+LOCK TABLES `acerca__de` WRITE;
+/*!40000 ALTER TABLE `acerca__de` DISABLE KEYS */;
+/*!40000 ALTER TABLE `acerca__de` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `acerca_de`
@@ -63,6 +74,16 @@ CREATE TABLE `acerca_de` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `acerca_de`
+--
+
+LOCK TABLES `acerca_de` WRITE;
+/*!40000 ALTER TABLE `acerca_de` DISABLE KEYS */;
+INSERT INTO `acerca_de` VALUES (1,'202312345','Tu Nombre','12345678',NULL,'Proyecto Biblioteca','1.0','2025-11-11'),(2,'202312345','Tu Nombre','12345678',NULL,'Proyecto Biblioteca','1.0','2025-11-11');
+/*!40000 ALTER TABLE `acerca_de` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `acercaa_de`
 --
 
@@ -80,6 +101,16 @@ CREATE TABLE `acercaa_de` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `acercaa_de`
+--
+
+LOCK TABLES `acercaa_de` WRITE;
+/*!40000 ALTER TABLE `acercaa_de` DISABLE KEYS */;
+INSERT INTO `acercaa_de` VALUES (1,'Rita Shantal de León Sanchez','7690-16-3770','Sistema de Biblioteca','1.0','15-11-2025','');
+/*!40000 ALTER TABLE `acercaa_de` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `acercade`
@@ -101,6 +132,15 @@ CREATE TABLE `acercade` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `acercade`
+--
+
+LOCK TABLES `acercade` WRITE;
+/*!40000 ALTER TABLE `acercade` DISABLE KEYS */;
+/*!40000 ALTER TABLE `acercade` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `autores`
 --
 
@@ -112,8 +152,18 @@ CREATE TABLE `autores` (
   `nombre` varchar(150) NOT NULL,
   `nacionalidad` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `autores`
+--
+
+LOCK TABLES `autores` WRITE;
+/*!40000 ALTER TABLE `autores` DISABLE KEYS */;
+INSERT INTO `autores` VALUES (1,'Gabriela Lainfiesta','australiana'),(2,'Catalina Santos','canadience'),(3,'Gabriel Garcia Marquez','Colombiana'),(4,'Alicia Escobedo','puertoriqueña'),(5,'Gabriela Garcia Marquez','venezolana'),(6,'Mario Vargas ','Peruano'),(7,'Isabel Allende','Chilena'),(8,'Julio Solola','Argentino'),(9,'Guadalupe Cordoba','mexicana'),(10,'Mario Vargas ','Peruano'),(11,'Isabel Allende','Chilena'),(12,'Julio Solola','Argentino'),(16,'Rita de Leon','guatemalteca');
+/*!40000 ALTER TABLE `autores` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `categorias`
@@ -128,6 +178,16 @@ CREATE TABLE `categorias` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categorias`
+--
+
+LOCK TABLES `categorias` WRITE;
+/*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
+INSERT INTO `categorias` VALUES (1,'Romance'),(2,'Novela'),(5,'Accion'),(6,'Niños');
+/*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `libros`
@@ -152,6 +212,16 @@ CREATE TABLE `libros` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `libros`
+--
+
+LOCK TABLES `libros` WRITE;
+/*!40000 ALTER TABLE `libros` DISABLE KEYS */;
+INSERT INTO `libros` VALUES (1,'Cien Años de Soledad',1,1,1967,5),(3,'Caperucita Roja',16,6,2016,3);
+/*!40000 ALTER TABLE `libros` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `usuarios`
 --
 
@@ -168,6 +238,16 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'usuarioRita','admin123','ADMIN',1);
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
 SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -179,4 +259,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-13 21:47:23
+-- Dump completed on 2025-11-13 22:36:37
