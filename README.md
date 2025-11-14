@@ -45,7 +45,7 @@ Para ejecutar el proyecto desde NetBeans:
 4. Ejecutar el proyecto 
 5. El sistema se abrira con la ventana de Ingreso, donde pedira usuario y contraseña.  
 
-## Acerca_de
+## Acercade
 - El formulario muestra informacion del alumno: Carne, Nombre completo y demas datos.  
 - La foto se debe cargar en el boton Cargar Foto,como referencia en la carpeta src/imagenes hay una fotografia y se guarda la ruta en la base de datos.  
 - Los datos del alumno se toman de la tabla acercaa_de 
