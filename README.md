@@ -6,7 +6,11 @@
 - **Curso:** Programacion 2  
 - **Proyecto:** Sistema de Biblioteca, proyecto Final 
 - **Fecha:** sabado 15 de noviembre de 2025  
-- **Version:** 1.0  
+- **Version:** 1.0
+
+  ## Usuario y contraseña para Ingresar al proyecto
+  **Usuario** usuarioRita
+  **contraseña** usuarioRita
 
 ## Contenido del Proyecto
 Este proyecto incluye:
