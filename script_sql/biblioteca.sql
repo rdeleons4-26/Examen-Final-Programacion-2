@@ -23,7 +23,7 @@ SET @@SESSION.SQL_LOG_BIN= 0;
 -- GTID state at the beginning of the backup 
 --
 
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '755dfe4a-bf60-11f0-ab07-ec916146af7c:1-125';
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '755dfe4a-bf60-11f0-ab07-ec916146af7c:1-179';
 
 --
 -- Table structure for table `acerca__de`
@@ -152,7 +152,7 @@ CREATE TABLE `autores` (
   `nombre` varchar(150) NOT NULL,
   `nacionalidad` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +161,7 @@ CREATE TABLE `autores` (
 
 LOCK TABLES `autores` WRITE;
 /*!40000 ALTER TABLE `autores` DISABLE KEYS */;
-INSERT INTO `autores` VALUES (1,'Gabriela Lainfiesta','australiana'),(2,'Catalina Santos','canadience'),(3,'Gabriel Garcia Marquez','Colombiana'),(4,'Alicia Escobedo','puertoriqueña'),(5,'Gabriela Garcia Marquez','venezolana'),(6,'Mario Vargas ','Peruano'),(7,'Isabel Allende','Chilena'),(8,'Julio Solola','Argentino'),(9,'Guadalupe Cordoba','mexicana'),(10,'Mario Vargas ','Peruano'),(11,'Isabel Allende','Chilena'),(12,'Julio Solola','Argentino'),(16,'Rita de Leon','guatemalteca');
+INSERT INTO `autores` VALUES (2,'Catalina Santos Herrera','canadience'),(3,'Gabriel Garcia Marquez','Colombiana'),(4,'Alicia Escobedo','puertoriqueña'),(5,'Gabriela Garcia Marquez','venezolana'),(6,'Mario Vargas ','Peruano'),(7,'Isabel Allende','Chilena'),(8,'Julio Solola','Argentino'),(9,'Guadalupe Cordoba','mexicana'),(11,'Isabel Allende','Chilena'),(12,'Julio Solola','Argentino'),(16,'Rita de Leon','guatemalteca'),(19,'Hugo Estrada Cabrera','guatemalteco'),(20,'Gabriela Garcia Marquez','venezolana'),(23,'Rita Shantal','Guatemala'),(25,'Luis Aldana','peruano ');
 /*!40000 ALTER TABLE `autores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,7 +176,7 @@ CREATE TABLE `categorias` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -203,12 +203,13 @@ CREATE TABLE `libros` (
   `categoria_id` int DEFAULT NULL,
   `anio` int DEFAULT NULL,
   `stock` int DEFAULT '0',
+  `destacado` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_libro_autor` (`autor_id`),
   KEY `fk_libro_categoria` (`categoria_id`),
   CONSTRAINT `fk_libro_autor` FOREIGN KEY (`autor_id`) REFERENCES `autores` (`id`) ON DELETE SET NULL,
   CONSTRAINT `fk_libro_categoria` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +218,7 @@ CREATE TABLE `libros` (
 
 LOCK TABLES `libros` WRITE;
 /*!40000 ALTER TABLE `libros` DISABLE KEYS */;
-INSERT INTO `libros` VALUES (1,'Cien Años de Soledad',1,1,1967,5),(3,'Caperucita Roja',16,6,2016,3);
+INSERT INTO `libros` VALUES (1,'Cien Años de Soledad',NULL,1,1967,5,0),(3,'Caperucita Roja',16,6,2016,3,0),(7,'Los arboles',16,5,2025,3,0),(9,'Los caballeros',9,5,2021,9,0),(11,'Los caballos',2,1,2025,8,1),(12,'Los siete enanos',25,6,1995,3,1);
 /*!40000 ALTER TABLE `libros` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,4 +260,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-13 22:36:37
+-- Dump completed on 2025-11-15 11:36:10
