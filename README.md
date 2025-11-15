@@ -10,7 +10,7 @@
 
   ## Usuario y contraseña para Ingresar al proyecto
   **Usuario** usuarioRita
-  **contraseña** usuarioRita
+  **contraseña** admin123
 
 ## Contenido del Proyecto
 Este proyecto incluye:
